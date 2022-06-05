@@ -1,0 +1,5 @@
+# VS Code Variables
+*__pycache__
+
+# Environment Variables
+.flaskenv
