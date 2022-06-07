@@ -10,7 +10,7 @@ class Config:
 class DevConfig(Config):
     DEBUG = True
     SECRET_KEY = os.environ.get("SECRET_KEY")
-    SQLALCHEMY_DATABASE_URI = "postgresql://databaseuser:P@ssw0rd@localhost:5432/fake_admin"
+    SQLALCHEMY_DATABASE_URI = "postgresql://databaseuser:password@localhost:5432/fake_admin"
 
 class TestConfig(Config):
     DEBUG = True
