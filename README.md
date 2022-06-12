@@ -31,6 +31,8 @@ To set the database:
 - Switch to your created database:
 `\c database_name`
 
+- Change the `SQLALCHEMY_DATABASE_URI` string in `config.py` to reflect your database name and access: `"postgresql://databaseuser:password@localhost:5432/database_name"`
+
 - Initialize database with [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html) and SQLAlchemy by typing `flask db init` 
 
 - Create initial migration with:
