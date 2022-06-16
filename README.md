@@ -15,7 +15,7 @@ Uses the [Bootswatch 3](https://bootswatch.com/3/default) styling themes: Lumen,
 - Requires a local Postgres environment with a superuser: Recommend using the Postgres CLI
 - Install python dependencies: `pipenv install` or the equivalent command for your python package manager
 
-To run the development server: 
+### To run the development server: 
 
 In the python shell: `FLASK_ENV=development  python3 app.py flask run`
 
@@ -43,4 +43,12 @@ To set the database:
 
 > **Note:** [Alembic]() in Flask-Migrate does not detect all changes to the database (changes to table names, column names, anonymous constraints) so you must review the migration script and edit as appropriate
 
+### To Update the Database or Models
+
 Each time the database models change repeat the `migrate` and `upgrade` commands
+
+When adding a new model that should be accessible via the Admin panel, register the view to Flask-Admin:
+
+`admin.add_view(ModelView(models.YourModelClass, db.session))`
+
+
